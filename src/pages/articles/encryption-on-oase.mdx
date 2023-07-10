@@ -33,24 +33,26 @@ Especially not if you have the requirements that Oase has:
 
 So what can we do to mitigate the risks this architecture imposes?
 
-Trust is key
+## Trust is key
 
 First of all, we have to make sure, that everyone that works at Oase and potentially has access to the database is trustworthy. Because trust is what it all boils down to. Do you trust us to keep your data safe? This is always what it comes down to. Trust. We need to earn that trust.
 
-So we will make a great effort to make sure, that everybody with access to critical infrastructure is trustworthy! How. As there are no other employees with that access that me, Anders, the founder of Oase, this question will have to wait.
+So we will make a great effort to make sure, that everybody with access to critical infrastructure is trustworthy! How? As there are no other employees with that access that me, Anders, the founder of Oase, this question will have to wait.
 
-The tree of trust
+## The tree of trust
 
 Let’s imagine a tree where you are at the root. All the services you use, all the people you interact with a nodes. Each time you share some information down the tree, you delegate trust to that party that they will handle the information diligently.
 
 This delegation moves trust down the tree. The further down responsibility is delegated, the less control you have. So you need to pay attention to who you delegate what responsibility to, and what level of trust is required.
 
-One of the arguments for getting end-to-end-encryption to begin with, was to make sure, that even if you have full access to all Oase infrastructure, which only few people will have, you would have to do an active and complicated effort to be able to read any user data.
+One of the arguments for getting end-to-end-encryption to begin with, was to make sure, that even if you have full access to all Oase infrastructure, which only few people should have, you would have to do an active and complicated effort to be able to read any user data.
 
 So you show us, Oase, a lot of trust using your platform to communicate with your peers.Like, a lot! And we take that very seriously! Given our ambitions to be the go-to platform for communities, we will potentially handle a lot of data, for a lot of people.
 
-The strategy we employ to make us deserve your trust, is to use end-to-end encryption and store the cipher text and the keys in different places. This ensures, that in order for someone evil to get your data, they would have to breach two seperate infrastructures.
+The strategy we employ to make us deserve your trust, is to use end-to-end encryption and store the cipher text and the keys in different places. This ensures, that in order for someone with bad intentions to get your data, they would have to breach two seperate infrastructures.
 
 And then, of course, you will have to trust, that no one with access to both ciphers and keys, will ever decrypt your data. Hopefully, these people will always be trusted employees of Oase, and you can certainly trust that we will work hard and continuously to deserve that trust.
+
+As a small notabene, I want to mention that we have prepared our infrastructure to support custom key management per oase. This means, that it would be possible in theory to manage the keys for encryption yourself for the oases you want. It would require some more development and some decisions about how the user experience should be in that case. But this would potentially give true end-to-end encryption where only the people with access to the keys could decrypt it. And this would exclude Oase.
 
 
