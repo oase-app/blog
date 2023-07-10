@@ -1,0 +1,112 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Anders Lemke-Holstein',
+  date: '2023-07-09',
+  title: 'Privacy at Oase: It is all about trust',
+  description:
+    "What is end-to-end encryption, why is it important, and how did we approach it on Oase. In this post we explain our motivation for introducing encryption, with it's benefits and drawbacks.",
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Oase wants to be the best platform for communities. We want to be top of mind when you sit with a group of people that needs to communicate and coordinate something.
+
+> "Hey, let me create an oase for us real quick"
+
+We want to create that platform that you can trust to be on your side. No hidden agendas. No conflict of interests. An app that has the features you expect and know how to use. An app that will help you&mdash;not harvest your attention.
+
+But in order to be that app, there is __one word__ in the above sentences that is crucial: __Trust__.
+
+## Trust is key
+Every time you share information with someone, you show them trust. Trust that they will handle the information you share with them diligently and with respect.
+
+When you communicate using technology, you have to be aware, that you're not only sharing the information with the people at the other end of the conversation. You _also_ share the information with the companies providing the technology. This means that you both delegate trust to the people in your conversation _and_ the company providing the app you communicate within.
+
+Given our ambitions to be the go-to platform for communities, we will potentially handle a lot of information. For a lot of people. That is potentially __a lot of trust__ being given to us.
+
+We need to _deserve and earn_ that trust.
+
+We do that, by ensuring that the information you share with us, will never end before the eyes of anyone else than the people you intend to share it with. Never!
+
+This would break the trust between us.
+
+This post outlines our analysis of how to avoid that, and how we solved it.
+
+## Lingo intermezzo
+I will use two similar words: Oase and oase. They have different meanings. When capitalised, I'm referring to the company Oase. When not capitalised: oase, I'm referring to the entities you create in our product. You create an oase. People join your oase where they can write messages and share pictures. Only other members of that oase can see what is shared within the oase.
+
+With that out of the way, let's continue with our analysis of parties involved when you use technology to communicate with other people.
+
+## Involved parties
+
+When you write a message on Oase, the data is moved through the internet to our servers where it is stored in a database. From there it is sent through the internet again to the devices of other members of the oase the message was written in.
+
+There are a lot of involved parties in this journey: The manufacturer of you device, your ISP, our hosting provider, our logging provider, our database provider, the other oase members' ISPs and their phone manufacturers.
+
+Let's take a look a some of the key participants, and evaluate the the level of __trust__ we can show by evaluating the level of _control_ we have over them.
+
+### Phone manufacturers
+The manufacturer of your phone has full access to any information shown on the screen. We have _no control_ over what they do with our data, but we have to show them **full trust** in order to do anything on their devices.
+
+### The network
+We have _no control_ over how the network at large handles our data, and we can show them __no trust__ in that it will handle it diligently. Data can and will be logged in places out of our control and we have no idea who will eventually see it.
+
+### Our hosting, databases and other services
+When running in "the cloud", as we do at Oase, you have _no control_ of the services you use. You might have the illusion of control over eg. the database you get, but you have no control of what is logged where by the provider of that database. This results in a situation where we can show our service providers __no trust__.
+
+### Employees of Oase
+Employees of Oase will have access to all data Oase handles. At least _some_ employees will. They need this access to develop and maintain the systems that run Oase.
+
+Can we trust them? Well. That is complicated. I would love to be able to say "Yes, always". But the harsh truth is, that at some point, there might be an employee we shouldn't have shown any trust. I really hope it will never happen, and I will do anything in my power to avoid it.
+
+The fact is, that we only have _limited control_ over the employees at Oase. (This sounds wrong! We don't control people. What I mean is, that we _can control_ who we show the trust, we _can not control_ how they manage the trust given, but we _can control_ who we stop showing the trust if they can not be trusted.)
+
+As a result, we can show employees of Oase __limited trust__.
+
+## The requirements
+Given this analysis, we can now formulate our requirements to the solution:
+
+1. We do not want to put trust on any party that can be shown **no trust**.
+2. We want all **historical data to be readable** for **new oase members** after they join an oase.
+3. **Inviting** others and **joining** oases should be really easy and simple. No going back and forth exchanging keys and secrets.
+4. It should be really easy **opening your oases on new devices**. For example on your phone and on your desktop. And both devices should see the same data.
+5. Given that employees of Oase have access to databases and sometimes has to look through logs, they can end in situations where the data from users are shown on their screens. In order to **protect our employees** from accidentally seeing messages not intended for them to see, we will have to make sure, that the data they potentially can see on their screens are not human readable in any form.
+
+## The solution
+Given this situation of trust and the requirements, we've decided to use **end-to-end encryption using AES-GCM with key management handled by Oase**.
+
+This means that data is encrypted on your device before you send the message, and it is _not_ decrypted before it reaches your peer oase members devices.
+
+The data is unreadable for **any of the parties** handling the data on the journey from your device to your peer oase members devices.
+
+An oase will get an encryption key which can be accessed exclusively by the oase members. This key will be used to encrypt and decrypt data _on device_.
+
+An important part of the solution is that the encryption keys are stored in a different cloud than the data itself. This ensures that a potential breach with any of our providers alone would not give an adversary any readable data.
+
+## The result
+This solution checks all of our requirements.
+
+✅ No trust is given any party that can not be trusted.
+
+✅ New members can read old data.
+
+✅ Inviting and joining oases is really easy.
+
+✅ You can use Oase on any device easily.
+
+✅ Employees at Oase won't read messages by accident.
+
+## The caveat
+There is _one_ place we place a lot of trust in this solution that you will have to accept as a user of Oase: The employees of Oase with access to the databases.
+
+In theory, employees with access to the two databases that stores data and keys, will be able to decrypt all content. It would require a complicated and active effort to do so, but it would be possible.
+
+This is a result of the encryption keys being managed by Oase. If we were not to manage the keys, you would have to do that yourself. And to be honest, this is complicated and would inevitably hurt user experience.
+
+We believe that the the solution we chose, strikes an acceptable balance between privacy and user experience.
+
+If it turns out, that this is unacceptable, the architecture we've used to build the solution opens for the possibility for users to handle key management themselves per oase. This would in theory give end-to-end encryption where no one at Oase would be able to decrypt any messages. Exactly how it would work, and how the user journey would be in those oases, are unexplored for now.
+
+## Conclusion
+The end-to-end encryption used by Oase provides a secure and private solution for the users of Oase, as long as they can accept that employees of Oase ___in theory___ can decrypt their messages.
