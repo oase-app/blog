@@ -243,7 +243,7 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Oase - Where communities thrive
+          Oase - Blog
         </title>
         <meta
           name="description"
