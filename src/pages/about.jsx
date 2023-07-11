@@ -60,7 +60,7 @@ export default function About() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="text-4xl font-b-medium tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               We&apos;re Oase. We live in Copenhagen, Denmark, where we build a platform for communities.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
@@ -69,6 +69,9 @@ export default function About() {
               </p>
               <p>
                 Anders has been building software for startups in Copenhagen since 2008 where he graduated from DTU with a degree in Computer Science.
+              </p>
+              <p>
+                Most recently he was the architect and lead engineer laying the groundwork for the distribution platform for Zetland, a Danish media startup.
               </p>
             </div>
           </div>
