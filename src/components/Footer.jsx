@@ -24,6 +24,7 @@ export function Footer() {
                 <NavLink href="https://oase.app">App</NavLink>
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/articles">Articles</NavLink>
+                <NavLink href="https://changelog.oase.app">Changelog</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">

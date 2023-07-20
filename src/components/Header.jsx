@@ -124,6 +124,7 @@ function MobileNavigation(props) {
                 <MobileNavItem href="https://oase.app">App</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
+                <MobileNavItem href="https://changelog.oase.app">Changelog</MobileNavItem>
                 <MobileNavItem href="/uses">Uses</MobileNavItem>
               </ul>
             </nav>
@@ -164,6 +165,7 @@ function DesktopNavigation(props) {
         <NavItem href="https://oase.app">App</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
+        <NavItem href="https://changelog.oase.app">Changelog</NavItem>
         <NavItem href="/uses">Uses</NavItem>
       </ul>
     </nav>
