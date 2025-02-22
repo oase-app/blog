@@ -8,34 +8,40 @@ const people = [
   {
     name: 'Edmonia Baker',
     description:
-      'Edmonia contributes with her deep knowledge and understanding of complexity, diversity and storytelling.',
+      'With deep expertise in complexity, diversity, and storytelling, Edmonia helps us navigate and communicate the nuances of our mission.',
     link: { href: 'https://www.linkedin.com/in/edmoniabaker/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C4E03AQEhvrIqE17pUw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516322822712?e=1745452800&v=beta&t=U40jOgQaAOpjsul0wA-79tTrsA9sH-wwqGPeqpRxhb8"
   },
   {
     name: 'Mie Oehlenschläger',
     description:
-      'With her deep understanding and huge network within the political space, Mie knows what is up and down, and which tendencies to keep up with especially within child protection.',
+      'With a vast network and deep insight into the political landscape, Mie understands the shifting dynamics—especially in child protection—and helps us stay ahead of key developments.',
     link: { href: 'https://www.linkedin.com/in/mie-oehlenschl%C3%A4ger-78b26321/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C5603AQE9ruaqYxk_Ow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1520006070710?e=1745452800&v=beta&t=o6W6T9OACwoDdeTcoSqjtdvLZ9lqxPoFx6wrGVfr0sE"
   },
   {
     name: 'Pernille Tranberg',
-    description: 'Data ethicist at heart, Pernille can help us making the right decision ensuring strong privacy and security.',
+    description: 'A true data ethicist, Pernille ensures we make the right choices when it comes to privacy and security, helping us uphold the highest standards.',
     link: { href: 'https://www.linkedin.com/in/pernilletranberg/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C4E03AQE0w-fhFqlbCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1644512300331?e=1745452800&v=beta&t=qL-pPijBPE2OtYW3Y1SKeH73Ahgzhuf2dic7xwfFDWE"
   },
   {
     name: 'Mette Wiinblad Andersen',
-    description: 'With her experience driving the marketing, communications and business forward for several successfull and respectable brands, Mette shares her insight about go-to-market strategies and business development.',
+    description: 'With extensive experience in marketing, communications, and business growth, Mette provides invaluable guidance on go-to-market strategies and business development.',
     link: { href: 'https://www.linkedin.com/in/metteandersen/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHxPJ31LmN7cg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730366365125?e=1745452800&v=beta&t=PhjtjEsnPixG2hmcsHaJ7M7zrsk9_mvJLHpw21elFoU"
   },
   {
     name: 'Anne Kroijer',
-    description: 'With her unrelenting energy, Anne provides clear guidance within market analysis, business development and governance.',
+    description: 'Anne brings relentless energy and sharp expertise in market analysis, business development, and governance, offering clear and actionable guidance.',
     link: { href: 'https://www.linkedin.com/in/annekroijer/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C4E03AQGMHufYaiO2ww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1637787016782?e=1745452800&v=beta&t=AKc6dqrUm20RW5VC0JTOdv3-VdUkmMWyOKTdQ-WZjfo"
+  },
+  {
+    name: 'Katinka Bukh',
+    description: 'An award-winning creative director, Katinka has a talent for distilling complexity to its core. She helps us define and express our values and principles with clarity.',
+    link: { href: 'https://www.linkedin.com/in/katinkabukh/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQGZ56fhu7taBA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699009476360?e=1745452800&v=beta&t=yZSmGcMa8t6tSGrxsp02F-sTVo7nraxFk_L8dWQrZJw"
   },
   // {
   //   name: '',
