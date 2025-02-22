@@ -24,6 +24,18 @@ const people = [
     link: { href: 'https://www.linkedin.com/in/pernilletranberg/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C4E03AQE0w-fhFqlbCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1644512300331?e=1745452800&v=beta&t=qL-pPijBPE2OtYW3Y1SKeH73Ahgzhuf2dic7xwfFDWE"
   },
+  {
+    name: 'Mette Wiinblad Andersen',
+    description: 'With her experience driving the marketing, communications and business forward for several big brands, Mette shares her insight about go-to-market strategies and business development.',
+    link: { href: 'https://www.linkedin.com/in/metteandersen/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHxPJ31LmN7cg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730366365125?e=1745452800&v=beta&t=PhjtjEsnPixG2hmcsHaJ7M7zrsk9_mvJLHpw21elFoU"
+  },
+  {
+    name: 'Anne Kroijer',
+    description: 'With her unrelenting energy, Anne provides clear guidance within market analysis, business development and governance.',
+    link: { href: 'https://www.linkedin.com/in/annekroijer/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQGMHufYaiO2ww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1637787016782?e=1745452800&v=beta&t=AKc6dqrUm20RW5VC0JTOdv3-VdUkmMWyOKTdQ-WZjfo"
+  },
   // {
   //   name: '',
   //   description: '',
@@ -52,7 +64,7 @@ export default function People() {
   return (
     <SimpleLayout
       title="Advisory Board"
-      intro="Meet our brilliant advisors. We feel genuinely humbled and thankfull that these people are willing to share their knowledge with us."
+      intro="Meet our brilliant advisors. We feel genuinely humbled and thankfull that these people are willing to share their knowledge with us. Thank you!"
     >
       <ul
         role="list"
