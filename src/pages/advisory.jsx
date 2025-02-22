@@ -57,53 +57,62 @@ function LinkIcon(props) {
 
 export const metadata = {
   title: 'Advisory Board',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: "Meet our brilliant advisors. We feel genuinely humbled and thankfull that these people are willing to share their knowledge with us. Thank you!"
 }
 
 export default function People() {
   return (
-    <SimpleLayout
-      title="Advisory Board"
-      intro="Meet our brilliant advisors. We feel genuinely humbled and thankfull that these people are willing to share their knowledge with us. Thank you!"
-    >
-      {
-        // Included to make sure OG image is oase
-      }
-      <Image
-        src={"https://oase.app/favicon.png"}
-        width={64}
-        height={64}
-        alt=""
-        sizes="(min-width: 1024px) 32rem, 20rem"
-        className="aspect-square hidden object-cover"
-      />
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+    <>
+      <Head>
+        <title>{metadata.title} - Oase</title>
+        <meta
+          name="description"
+          content={metadata.description}
+        />
+      </Head>
+      <SimpleLayout
+        title={metadata.title}
+        intro={metadata.description}
       >
-        {people.map((person) => (
-          <Card as="li" key={person.name}>
-            <div className="relative z-10 flex h-46 w-46 items-center justify-center rounded-full overflow-hidden bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={person.image}
-                alt=""
-                width="200"
-                height="200"
-                unoptimized
-              />
-            </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={person.link.href}>{person.name}</Card.Link>
-            </h2>
-            <Card.Description>{person.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{person.link.label}</span>
-            </p>
-          </Card>
-        ))}
-      </ul>
-    </SimpleLayout>
+        {
+          // Included to make sure OG image is oase
+        }
+        <Image
+          src={"https://oase.app/favicon.png"}
+          width={64}
+          height={64}
+          alt=""
+          sizes="(min-width: 1024px) 32rem, 20rem"
+          className="aspect-square hidden object-cover"
+        />
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {people.map((person) => (
+            <Card as="li" key={person.name}>
+              <div className="relative z-10 flex h-46 w-46 items-center justify-center rounded-full overflow-hidden bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={person.image}
+                  alt=""
+                  width="200"
+                  height="200"
+                  unoptimized
+                />
+              </div>
+              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                <Card.Link href={person.link.href}>{person.name}</Card.Link>
+              </h2>
+              <Card.Description>{person.description}</Card.Description>
+              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                <LinkIcon className="h-6 w-6 flex-none" />
+                <span className="ml-2">{person.link.label}</span>
+              </p>
+            </Card>
+          ))}
+        </ul>
+      </SimpleLayout>
+    </>
   )
 }
 
