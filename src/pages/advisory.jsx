@@ -66,6 +66,7 @@ export default function People() {
     <>
       <Head>
         <title>{metadata.title} - Oase</title>
+        <meta name="title" property="og:title" content={metadata.title} />
         <meta
           name="description"
           property="og:description"
