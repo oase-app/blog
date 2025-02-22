@@ -68,6 +68,7 @@ export default function People() {
         <title>{metadata.title} - Oase</title>
         <meta
           name="description"
+          property="og:description"
           content={metadata.description}
         />
         <meta name="image" property="og:image" content="https://oase.app/og-image.png" />
@@ -76,17 +77,6 @@ export default function People() {
         title={metadata.title}
         intro={metadata.description}
       >
-        {
-          // Included to make sure OG image is oase
-        }
-        <Image
-          src={"https://oase.app/favicon.png"}
-          width={64}
-          height={64}
-          alt=""
-          sizes="(min-width: 1024px) 32rem, 20rem"
-          className="aspect-square hidden object-cover"
-        />
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
