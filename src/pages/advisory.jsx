@@ -58,7 +58,7 @@ function LinkIcon(props) {
 
 export const metadata = {
   title: 'Advisory Board',
-  description: "Meet our brilliant advisors. We feel genuinely humbled and thankfull that these people are willing to share their knowledge with us. Thank you!"
+  description: "Meet our advisors. We feel genuinely humbled and grateful for their willingness to share their knowledge with us. Thank you!"
 }
 
 export default function People() {
