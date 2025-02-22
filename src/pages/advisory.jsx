@@ -70,6 +70,7 @@ export default function People() {
           name="description"
           content={metadata.description}
         />
+        <meta name="image" property="og:image" content="https://oase.app/og-image.png" />
       </Head>
       <SimpleLayout
         title={metadata.title}
