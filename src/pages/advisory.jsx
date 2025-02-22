@@ -26,7 +26,7 @@ const people = [
   },
   {
     name: 'Mette Wiinblad Andersen',
-    description: 'With her experience driving the marketing, communications and business forward for several big brands, Mette shares her insight about go-to-market strategies and business development.',
+    description: 'With her experience driving the marketing, communications and business forward for several successfull and respectable brands, Mette shares her insight about go-to-market strategies and business development.',
     link: { href: 'https://www.linkedin.com/in/metteandersen/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHxPJ31LmN7cg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730366365125?e=1745452800&v=beta&t=PhjtjEsnPixG2hmcsHaJ7M7zrsk9_mvJLHpw21elFoU"
   },
@@ -66,6 +66,17 @@ export default function People() {
       title="Advisory Board"
       intro="Meet our brilliant advisors. We feel genuinely humbled and thankfull that these people are willing to share their knowledge with us. Thank you!"
     >
+      {
+        // Included to make sure OG image is oase
+      }
+      <Image
+        src={"https://oase.app/favicon.png"}
+        width={64}
+        height={64}
+        alt=""
+        sizes="(min-width: 1024px) 32rem, 20rem"
+        className="aspect-square hidden object-cover"
+      />
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
