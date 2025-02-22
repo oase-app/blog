@@ -6,7 +6,6 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/avatar.jpg'
 
 function CloseIcon(props) {
   return (
@@ -125,6 +124,7 @@ function MobileNavigation(props) {
                 <MobileNavItem href="/feedback">Feedback</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
+                <MobileNavItem href="/advisory"><span className="whitespace-nowrap">Advisory Board</span></MobileNavItem>
                 <MobileNavItem href="https://changelog.oase.app">Changelog</MobileNavItem>
                 <MobileNavItem href="/uses">Uses</MobileNavItem>
               </ul>
@@ -167,6 +167,7 @@ function DesktopNavigation(props) {
         <NavItem href="/feedback">Feedback</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
+        <NavItem href="/advisory"><span className="whitespace-nowrap">Advisory Board</span></NavItem>
         <NavItem href="https://changelog.oase.app">Changelog</NavItem>
         <NavItem href="/uses">Uses</NavItem>
       </ul>
