@@ -26,6 +26,12 @@ const people = [
     image: "https://media.licdn.com/dms/image/v2/C4E03AQE0w-fhFqlbCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1644512300331?e=1745452800&v=beta&t=qL-pPijBPE2OtYW3Y1SKeH73Ahgzhuf2dic7xwfFDWE"
   },
   {
+    name: 'Peter Michael Oxholm Ziegler',
+    description: 'With a keen strategic mind and a deep understanding of business development, Peter helps us navigate growth, partnerships, and sustainable scaling. His experience in building and leading successful ventures ensures we stay on the right track.',
+    link: { href: 'https://www.linkedin.com/in/peter-michael-oxholm-zigler-9373603/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQEy1TW4exLUfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695283518508?e=1745452800&v=beta&t=Bsq5TqdeeGNAhCU6xwXFagzhdO6bDWKjrjEuYw6BYBQ"
+  },
+  {
     name: 'Mette Wiinblad Andersen',
     description: 'With extensive experience in marketing, communications, and business growth, Mette provides invaluable guidance on go-to-market strategies and business development.',
     link: { href: 'https://www.linkedin.com/in/metteandersen/', label: 'LinkedIn' },
