@@ -6,11 +6,10 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 
 const people = [
   {
-    name: 'Edmonia Baker',
-    description:
-      'With deep expertise in complexity, diversity, and storytelling, Edmonia helps us navigate and communicate the nuances of our mission.',
-    link: { href: 'https://www.linkedin.com/in/edmoniabaker/', label: 'LinkedIn' },
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQEhvrIqE17pUw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516322822712?e=1745452800&v=beta&t=U40jOgQaAOpjsul0wA-79tTrsA9sH-wwqGPeqpRxhb8"
+    name: 'Peter Michael Oxholm Ziegler',
+    description: 'With a keen strategic mind and a deep understanding of business development, Peter helps us navigate growth, partnerships, and sustainable scaling. His experience in building and leading successful ventures ensures we stay on the right track.',
+    link: { href: 'https://www.linkedin.com/in/peter-michael-oxholm-zigler-9373603/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQEy1TW4exLUfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695283518508?e=1745452800&v=beta&t=Bsq5TqdeeGNAhCU6xwXFagzhdO6bDWKjrjEuYw6BYBQ"
   },
   {
     name: 'Mie Oehlenschläger',
@@ -26,10 +25,17 @@ const people = [
     image: "https://media.licdn.com/dms/image/v2/C4E03AQE0w-fhFqlbCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1644512300331?e=1745452800&v=beta&t=qL-pPijBPE2OtYW3Y1SKeH73Ahgzhuf2dic7xwfFDWE"
   },
   {
-    name: 'Peter Michael Oxholm Ziegler',
-    description: 'With a keen strategic mind and a deep understanding of business development, Peter helps us navigate growth, partnerships, and sustainable scaling. His experience in building and leading successful ventures ensures we stay on the right track.',
-    link: { href: 'https://www.linkedin.com/in/peter-michael-oxholm-zigler-9373603/', label: 'LinkedIn' },
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQEy1TW4exLUfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695283518508?e=1745452800&v=beta&t=Bsq5TqdeeGNAhCU6xwXFagzhdO6bDWKjrjEuYw6BYBQ"
+    name: 'Tav Klitgaard',
+    description: 'An experienced leader in tech and digital transformation, Tav brings valuable insights into scaling organizations, strategy, and product development. His expertise helps us bridge the gap between vision and execution.',
+    link: { href: 'https://www.linkedin.com/in/tavklitgaard/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGaogd3usHsbw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726129683421?e=1746057600&v=beta&t=VxFa4hnLiVlqKC6iwABrU0kcqBjoa--D9ZUKri5CNWQ"
+  },
+  {
+    name: 'Edmonia Baker',
+    description:
+      'With deep expertise in complexity, diversity, and storytelling, Edmonia helps us navigate and communicate the nuances of our mission.',
+    link: { href: 'https://www.linkedin.com/in/edmoniabaker/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQEhvrIqE17pUw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516322822712?e=1745452800&v=beta&t=U40jOgQaAOpjsul0wA-79tTrsA9sH-wwqGPeqpRxhb8"
   },
   {
     name: 'Mette Wiinblad Andersen',
