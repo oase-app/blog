@@ -13,23 +13,29 @@ const people = [
     image: "https://media.licdn.com/dms/image/v2/C4E03AQEhvrIqE17pUw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516322822712?e=1745452800&v=beta&t=U40jOgQaAOpjsul0wA-79tTrsA9sH-wwqGPeqpRxhb8"
   },
   {
-    name: 'Peter Michael Oxholm Ziegler',
-    description: 'With a keen strategic mind and a deep understanding of business development, Peter helps us navigate growth, partnerships, and sustainable scaling. His experience in building and leading successful ventures ensures we stay on the right track.',
-    link: { href: 'https://www.linkedin.com/in/peter-michael-oxholm-zigler-9373603/', label: 'LinkedIn' },
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQEy1TW4exLUfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695283518508?e=1745452800&v=beta&t=Bsq5TqdeeGNAhCU6xwXFagzhdO6bDWKjrjEuYw6BYBQ"
-  },
-  {
     name: 'Mie Oehlenschläger',
     description:
-      'With a vast network and deep insight into the political landscape, Mie understands the shifting dynamics—especially in child protection—and helps us stay ahead of key developments.',
+      'With a vast network and deep insight into the ethical and political landscape, Mie understands the shifting dynamics—especially in child protection—and helps us stay ahead of key developments.',
     link: { href: 'https://www.linkedin.com/in/mie-oehlenschl%C3%A4ger-78b26321/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C5603AQE9ruaqYxk_Ow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1520006070710?e=1745452800&v=beta&t=o6W6T9OACwoDdeTcoSqjtdvLZ9lqxPoFx6wrGVfr0sE"
+  },
+  {
+    name: 'Katinka Bukh',
+    description: 'An award-winning creative director, Katinka has a talent for distilling complexity to its core. She helps us define and express our values and principles with clarity.',
+    link: { href: 'https://www.linkedin.com/in/katinkabukh/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQGZ56fhu7taBA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699009476360?e=1745452800&v=beta&t=yZSmGcMa8t6tSGrxsp02F-sTVo7nraxFk_L8dWQrZJw"
   },
   {
     name: 'Pernille Tranberg',
     description: 'A true data ethicist, Pernille ensures we make the right choices when it comes to privacy and security, helping us uphold the highest standards.',
     link: { href: 'https://www.linkedin.com/in/pernilletranberg/', label: 'LinkedIn' },
     image: "https://media.licdn.com/dms/image/v2/C4E03AQE0w-fhFqlbCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1644512300331?e=1745452800&v=beta&t=qL-pPijBPE2OtYW3Y1SKeH73Ahgzhuf2dic7xwfFDWE"
+  },
+  {
+    name: 'Peter Michael Oxholm Ziegler',
+    description: 'With a keen strategic mind and a deep understanding of business development, Peter helps us navigate growth, partnerships, and sustainable scaling. His experience in building and leading successful ventures ensures we stay on the right track.',
+    link: { href: 'https://www.linkedin.com/in/peter-michael-oxholm-zigler-9373603/', label: 'LinkedIn' },
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQEy1TW4exLUfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695283518508?e=1745452800&v=beta&t=Bsq5TqdeeGNAhCU6xwXFagzhdO6bDWKjrjEuYw6BYBQ"
   },
   {
     name: 'Tav Klitgaard',
@@ -50,10 +56,10 @@ const people = [
     image: "https://media.licdn.com/dms/image/v2/C4E03AQGMHufYaiO2ww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1637787016782?e=1745452800&v=beta&t=AKc6dqrUm20RW5VC0JTOdv3-VdUkmMWyOKTdQ-WZjfo"
   },
   {
-    name: 'Katinka Bukh',
-    description: 'An award-winning creative director, Katinka has a talent for distilling complexity to its core. She helps us define and express our values and principles with clarity.',
-    link: { href: 'https://www.linkedin.com/in/katinkabukh/', label: 'LinkedIn' },
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQGZ56fhu7taBA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699009476360?e=1745452800&v=beta&t=yZSmGcMa8t6tSGrxsp02F-sTVo7nraxFk_L8dWQrZJw"
+    name: 'Morten Grau Jensen',
+    description: 'A rising star in board work, Morten brings sharp strategic insight and hands-on experience in leadership and digital transformation. His expertise helps us navigate growth, governance, and long-term impact.',
+    link: { href: 'https://www.linkedin.com/in/mortengraujensen/', label: 'LinkedIn' },
+    image: "https://www.linkedin.com/in/mortengraujensen/"
   },
   // {
   //   name: '',
