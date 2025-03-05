@@ -59,7 +59,7 @@ const people = [
     name: 'Morten Grau Jensen',
     description: 'A rising star in board work, Morten brings sharp strategic insight and hands-on experience in leadership and digital transformation. His expertise helps us navigate growth, governance, and long-term impact.',
     link: { href: 'https://www.linkedin.com/in/mortengraujensen/', label: 'LinkedIn' },
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFjPO0q0lLDlg/profile-displayphoto-shrink_800_800/B4DZOxetDiHMAc-/0/1733849438921?e=1746057600&v=beta&t=IMog6QICaS60P31uUpWQeIda-_tTDLpuvEGO-QlTLSs"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHywbVRQ9WdaQ/profile-displayphoto-shrink_800_800/B4DZVJWftRHIAg-/0/1740692407846?e=1746662400&v=beta&t=2pcFTu8ZiYPFcqraiJxscOROI0EZ8rYmFi9fT-N1XHk"
   },
   // {
   //   name: '',
