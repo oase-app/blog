@@ -85,9 +85,9 @@ module.exports = {
           '--tw-prose-th-borders': theme('colors.zinc.200'),
           '--tw-prose-td-borders': theme('colors.zinc.100'),
 
-          '--tw-prose-invert-body': theme('colors.zinc.400'),
+          '--tw-prose-invert-body': theme('colors.zinc.300'),
           '--tw-prose-invert-headings': theme('colors.zinc.200'),
-          '--tw-prose-invert-links': theme('colors.teal.400'),
+          '--tw-prose-invert-links': theme('colors.teal.300'),
           '--tw-prose-invert-links-hover': theme('colors.teal.400'),
           '--tw-prose-invert-underline': theme('colors.teal.400 / 0.3'),
           '--tw-prose-invert-underline-hover': theme('colors.teal.400'),
@@ -109,12 +109,12 @@ module.exports = {
           color: 'var(--tw-prose-body)',
           lineHeight: theme('lineHeight.7'),
           '> *': {
-            marginTop: theme('spacing.10'),
-            marginBottom: theme('spacing.10'),
+            marginTop: theme('spacing.5'),
+            marginBottom: theme('spacing.5'),
           },
           p: {
-            marginTop: theme('spacing.7'),
-            marginBottom: theme('spacing.7'),
+            marginTop: theme('spacing.4'),
+            marginBottom: theme('spacing.4'),
           },
 
           // Headings
@@ -125,13 +125,13 @@ module.exports = {
           h2: {
             fontSize: theme('fontSize.xl')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.20'),
+            marginTop: theme('spacing.12'),
             marginBottom: theme('spacing.4'),
           },
           h3: {
             fontSize: theme('fontSize.base')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.16'),
+            marginTop: theme('spacing.12'),
             marginBottom: theme('spacing.4'),
           },
           ':is(h2, h3) + *': {
@@ -208,8 +208,8 @@ module.exports = {
             paddingLeft: theme('spacing.6'),
           },
           li: {
-            marginTop: theme('spacing.6'),
-            marginBottom: theme('spacing.6'),
+            marginTop: theme('spacing.2'),
+            marginBottom: theme('spacing.2'),
             paddingLeft: theme('spacing[3.5]'),
           },
           'li::marker': {
@@ -255,8 +255,8 @@ module.exports = {
 
           // Horizontal rules
           hr: {
-            marginTop: theme('spacing.20'),
-            marginBottom: theme('spacing.20'),
+            marginTop: theme('spacing.12'),
+            marginBottom: theme('spacing.12'),
             borderTopWidth: '1px',
             borderColor: 'var(--tw-prose-hr)',
             '@screen lg': {
