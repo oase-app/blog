@@ -13,8 +13,16 @@ import morten from '@/images/advisory/morten.jpg'
 import pernille from '@/images/advisory/pernille.jpg'
 import peter from '@/images/advisory/peter.jpg'
 import tav from '@/images/advisory/tav.jpg'
+import asbjoern from '@/images/advisory/asbjoern.jpg'
 
 const people = [
+  {
+    name: 'Asbjørn Kristensen Høgsbro',
+    description:
+      'Asbjørn is invaluable in sharpening our strategy and building alliances for long-term societal impact. With deep experience in public innovation, societal change and funding ecosystems, he advises on how we grow and finance Oase sustainably.',
+    link: { href: 'https://www.linkedin.com/in/asbjoernkhoegsbro/', label: 'LinkedIn' },
+    image: asbjoern
+  },
   {
     name: 'Edmonia Baker',
     description:
