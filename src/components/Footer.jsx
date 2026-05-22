@@ -36,7 +36,7 @@ export function Footer() {
                   &copy; {new Date().getFullYear()} Our Oase ApS. All rights
                   reserved.
                 </p>
-                <p>CVR-nr. DK43969161 &middot; Præstegårds Allé 50, 2700 Brønshøj</p>
+                <p>CVR-nr. DK43969161 &middot; Svanevej 22, 2400 København NV</p>
                 <p>
                   <a
                     href="tel:+4520442127"
