@@ -27,11 +27,32 @@ export function Footer() {
                 <NavLink href="/articles">Articles</NavLink>
                 <NavLink href="https://changelog.oase.app">Changelog</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
+                <NavLink href="/terms">Terms</NavLink>
+                <NavLink href="/privacy">Privacy</NavLink>
+                <NavLink href="/sales-terms">Sales terms</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Oase. All rights
-                reserved.
-              </p>
+              <div className="flex flex-col items-center gap-1 text-sm text-zinc-400 dark:text-zinc-500 sm:items-end">
+                <p>
+                  &copy; {new Date().getFullYear()} Our Oase ApS. All rights
+                  reserved.
+                </p>
+                <p>CVR-nr. DK43969161 &middot; Præstegårds Allé 50, 2700 Brønshøj</p>
+                <p>
+                  <a
+                    href="tel:+4520442127"
+                    className="transition hover:text-teal-500 dark:hover:text-teal-400"
+                  >
+                    +45 20 44 21 27
+                  </a>
+                  {' · '}
+                  <a
+                    href="mailto:info@oase.app"
+                    className="transition hover:text-teal-500 dark:hover:text-teal-400"
+                  >
+                    info@oase.app
+                  </a>
+                </p>
+              </div>
             </div>
           </Container.Inner>
         </div>
