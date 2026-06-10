@@ -38,7 +38,7 @@ Who is "responsible" for your data in the GDPR sense depends on how you use Oase
 - **Profile information**: your name, an optional profile picture, and your birth year and month (we deliberately don't ask for the full date).
 - **Content you share**: messages, posts, events, polls, images, files and similar — encrypted on your device before it is sent to us.
 - **Payer contact data**: if you or your organisation pays for Oase, we store the organisation's name, contact person and email address (see below).
-- **Error reports**: if the app crashes or misbehaves, a technical error report with pseudonymous identifiers (no content, no readable names) is sent to our error-reporting service so we can fix the problem.
+- **Error reports**: if the app crashes or misbehaves, a technical error report is sent to our error-reporting service so we can fix the problem. Personal-data identifiers are stripped before the report leaves the app — what remains are pseudonymous technical identifiers, never your content.
 
 ## What we don't collect
 
@@ -61,9 +61,21 @@ All user content — messages, posts, names, images, files and associated metada
 
 ## Where your data is stored
 
-Your data is stored encrypted, primarily in EU data-centre regions. Some of the companies we use are based outside the EU (for example in the US), even when the data itself sits in an EU region.
+All personal data is **stored** in EU data-centre regions:
 
-Where a provider is subject to third-country legislation, our transfer basis is the EU Standard Contractual Clauses (SCCs), supplemented by client-side encryption as a supplementary measure in line with EDPB Recommendations 01/2020. The encryption keys never leave the EU, so providers outside the EU only ever handle data they cannot decrypt.
+- **Database**: AWS Frankfurt/Paris (via Supabase)
+- **Files and media**: Scaleway, Paris
+- **Application**: Google Cloud Belgium (via Gigalixir)
+- **Encryption keys**: Scalingo, Strasbourg
+
+There is one explicit exception: media uploaded before April 2026 is stored with Cloudflare, Inc. in the US. It is being migrated and phased out.
+
+Two kinds of data pass *through* services outside the EU without being stored there:
+
+- **Push notifications** transit Apple, Google and Expo (US) with an encrypted payload that is only decrypted on your device.
+- **Technical error reports** are sent to Sentry (US). Personal-data identifiers are stripped before a report leaves the app.
+
+Finally, some of the companies we use are established outside the EU (Gigalixir in the US, Supabase in Singapore) even though the data itself sits in EU regions. Where a provider is subject to third-country legislation, our transfer basis is the EU Standard Contractual Clauses (SCCs), supplemented by client-side encryption as a supplementary measure in line with EDPB Recommendations 01/2020. The encryption keys never leave the EU, so providers outside the EU only ever handle data they cannot decrypt.
 
 ## The service providers we use
 
@@ -71,16 +83,16 @@ This list matches the sub-processor list in our Data Processing Agreement:
 
 | Provider | What they do | What they handle |
 | --- | --- | --- |
-| Gigalixir (Vesper Summit, LLC, US) | Application hosting | Encrypted content only, EU region |
-| Supabase Pte. Ltd. (Singapore) | Database hosting | Encrypted content, EU region |
-| Scaleway SAS (France) | File and media storage | Encrypted files |
+| Gigalixir (Vesper Summit, LLC, US) | Application hosting | Encrypted content only — Google Cloud Belgium |
+| Supabase Pte. Ltd. (Singapore) | Database hosting | Encrypted content — AWS Frankfurt/Paris |
+| Scaleway SAS (France) | File and media storage | Encrypted files — Paris |
 | Transloadit-II GmbH (Germany) | Upload processing | Encrypted files |
 | Hetzner Online GmbH (Germany) | Call infrastructure (LiveKit) | End-to-end encrypted call streams |
-| Scalingo SAS (France) | Encryption key storage | Keys — these never leave the EU |
+| Scalingo SAS (France) | Encryption key storage | Keys — Strasbourg, never leave the EU |
 | Google LLC (US) | Push notifications, Android (FCM) | Encrypted notification payloads |
 | Apple Inc. (US) | Push notifications, iOS (APNs) | Encrypted notification payloads |
 | 650 Industries, Inc. (Expo, US) | Push notification delivery | Encrypted notification payloads |
-| Functional Software, Inc. (Sentry, US) | Error reporting | Pseudonymous identifiers, no content |
+| Functional Software, Inc. (Sentry, US) | Error reporting | Pseudonymous identifiers only — personal-data identifiers are stripped before sending |
 | Google Cloud EMEA Ltd (Ireland) | Internal analytics | EU region (europe-west4) |
 | Vipps MobilePay AS (Norway) | Payment processing | Payment and payer details |
 | Cloudflare, Inc. (US) | Legacy media storage | Only media uploaded before April 2026; being phased out |
