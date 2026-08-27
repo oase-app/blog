@@ -2,66 +2,122 @@ import { DocumentLayout } from '@/components/DocumentLayout'
 
 export const meta = {
   author: 'Anders Lemke-Holstein',
-  date: '2023-07-09',
+  date: '2026-08-26',
   title: 'Privacy policy',
   description:
-    "",
+    'How Oase collects, protects, and stores personal information — and how encryption keeps your communities private.',
 }
 
 export default (props) => <DocumentLayout meta={meta} {...props} />
 
-This Privacy Policy describes how Our Oase ApS ("we," "us," or "our") collects, uses, stores, and shares personal information when you use our Oase app (the "App").
+This Privacy Policy describes how Our Oase ApS ("Oase", "we", "us") collects, uses, stores, and protects personal information when you use the Oase app and platform (the "App").
 
-## Information We Collect
+**Who we are:** Our Oase ApS, CVR 43969161, Præstegårds Allé 50, 2700 Brønshøj, Denmark. For anything related to data protection, write to dpa@oase.app.
 
-We collect and store the following types of personal information:
+## Our roles — who is responsible for your data
+
+Oase is built around communities called **oases**. Oases can be grouped under a **plenum**, owned by an organization (for example a residential institution, a school, or an association) that pays for the service.
+
+- **Oases under a plenum:** the organization that owns the plenum is the data controller for the personal data in its oases, and Oase processes that data on the organization's behalf under a data processing agreement. If you use Oase through such an organization, requests about your data should as a starting point go to that organization.
+- **Oases without a plenum:** Oase is the data controller.
+- **Billing contacts:** for the contact details of paying organizations (see below), Oase is the data controller.
+
+Organizations can enter into our data processing agreement whether or not they own a plenum yet (for example a municipality preparing to adopt Oase) — the agreement then covers the oases under their plenum from the moment one is created or transferred to them. Contact dpa@oase.app.
+
+## Information we collect
+
+**About users:**
+
 - Name
-- Images
-- Messages, and other text based content. For example but not limited to events and polls.
+- Profile picture
+- Birth year and month (never your full birth date)
+- Content you create: messages, posts, events, polls, images, files
+- A push notification token for your device
 
-## Purpose of Data Collection
-The personal information we collect is strictly used for providing functionality within the App.
+**About paying organizations:** organization name, contact person, and email address. This is stored in readable form (not encrypted) because we need it for invoicing and administration. Legal basis: performance of the contract (GDPR art. 6(1)(b)) and our legitimate interest in administering customer relationships (art. 6(1)(f)). We keep it for the duration of the customer relationship and as required by Danish bookkeeping rules.
 
-Your data will be shared only with other members of the oase in which you shared the data.
+## What we do not collect
 
-We will not share your data with any third parties.
+- Phone numbers
+- Your full birth date
+- Persistent logs of IP addresses
+- Location data
+- No third-party analytics, advertising, or tracking in the App — we only run our own internal analytics and technical error reporting
 
-We will not use your data for any marketing purposes.
+We do not sell your data, use it for marketing, or use it for profiling or automated decision-making.
 
-We will not sell your data.
+## Login
 
-We will not use your data for profiling or automated decision-making.
+Login is handled by [Promise](https://promiseauthentication.org), an independent authentication service that acts as its own data controller (similar to "Sign in with Google"). Your email address is processed by Promise, not by Oase, and is not stored in readable form. See [Promise's privacy policy](https://promiseauthentication.org/privacy) for how they handle your data.
 
-## Data Storage and Processing
-All data is stored within EU.
+## Encryption — the heart of how we protect you
 
-Database is hosted by Supabase.
-Files are hosted by Scaleway and uploaded via Transloadit.
+Everything you share in an oase is **encrypted on your device** (AES-GCM) before it leaves it: messages, posts, names, images, and files. Media files have been encrypted on-device since the summer of 2025. Audio and video calls are end-to-end encrypted. File names are anonymized before upload.
 
-Unless otherwise explicitly stated, all content will be encrypted and decrypted on device. This includes text, images and files.
+The encryption keys are stored exclusively with Scalingo SAS in France — on European-owned infrastructure, separate from everything else — and are only usable by members of the oase the content belongs to. The services that store your encrypted content never have the keys.
 
-The encryption we use is AES-GCM.
+When content is deleted, we delete the encryption keys (crypto-shredding), which instantly and permanently makes the encrypted data unreadable.
 
-Keys are controlled by Oase, and stored on a seperate infrastructure hosted by Scalingo, and will only be accessible to users who have access to the oase in which the data was shared.
+**Two exceptions you should know about:**
 
-## Cookies and Tracking Technologies
-We do not use cookies or any other tracking mechanisms within the App.
+- **Calendar feeds:** when an event is available in a personal calendar feed (iCal), the event's title, description, location, and the oase's name are also stored in readable form, so your calendar app can display them. You can choose per event whether it is available in a calendar feed. Event start and end times are always stored in readable form for technical reasons.
+- **Older media:** media uploaded before on-device media encryption was rolled out (and from older app versions) is stored unencrypted with Cloudflare, Inc. (US). This material is being migrated to encrypted storage in the EU, and Cloudflare is being phased out.
 
-## GDPR Compliance and User Rights
-We comply with the General Data Protection Regulation (GDPR). If you have any requests regarding your personal information, please contact us at info@oase.app. We will promptly address your inquiries and requests.
+## Where your data lives
 
-## Data Security
-We take appropriate measures to safeguard the personal information stored in our databases. Only trusted employees have access to the data, and we follow industry-standard security practices to prevent unauthorized access, loss, or misuse.
+Your personal data is **stored in EU regions**:
 
-## Data Retention
-We store the data as long as oases exist. However, under certain circumstances, data deletion may occur if it aligns with a business plan where keeping data longer than a specific period incurs costs.
+- Database: Supabase, in AWS Frankfurt with a replica in Paris
+- Files and media: Scaleway, Paris
+- Application hosting: Gigalixir, in Google Cloud's Belgium region
+- Encryption keys: Scalingo, Strasbourg
 
-## Third-Party Links
-The App does not contain any third-party links. This Privacy Policy applies solely to our App and does not cover any external websites or services.
+The one exception is the older unencrypted media at Cloudflare (US) described above, which is being phased out.
 
-## Policy Updates
-We may update this Privacy Policy from time to time as necessary. Users will be notified if there are any changes that affect the strict nature of the policy.
+Some data **transits** non-EU services: push notifications are delivered via Apple, Google, and Expo (US), but their content is encrypted and only decrypted on your device. Technical error reports go to Sentry (US) with personal identifiers scrubbed before sending. Application logs — which never contain your content, since it is encrypted before it reaches our servers — are streamed to Logflare (US) and deleted automatically after 7 days.
 
-If you have any questions or concerns about this Privacy Policy, please contact us at info@oase.app.
+Some of our providers are established outside the EU (Gigalixir in the US; Supabase in Singapore) even though the data itself is stored in EU regions. Those transfers rest on the EU Standard Contractual Clauses, supplemented by the on-device encryption described above (in line with the EDPB's recommendations 01/2020) — and the keys never leave the EU.
 
+## Our service providers
 
+We use a small set of service providers to run Oase, each bound by a data processing agreement or equivalent terms:
+
+| Provider | What they do |
+|---|---|
+| Gigalixir (Vesper Summit, LLC), US | Application hosting (encrypted content only), EU region |
+| Supabase Pte. Ltd., Singapore | Database (encrypted content, push tokens, calendar feed data), EU regions |
+| Scaleway SAS, France | File and media storage (encrypted) |
+| Transloadit-II GmbH, Germany | Upload processing (encrypted files, anonymized names), EU region |
+| Hetzner Online GmbH, Germany | Call infrastructure (end-to-end encrypted calls) |
+| Scalingo SAS, France | Encryption key storage |
+| Google LLC (FCM), US | Push notifications, Android (encrypted payload) |
+| Apple Inc. (APNs), US | Push notifications, iOS (encrypted payload) |
+| 650 Industries, Inc. (Expo), US | Push token registration (being phased out) |
+| Functional Software, Inc. (Sentry), US | Error reporting (identifiers scrubbed) |
+| Google Cloud EMEA Ltd, Ireland | Internal analytics, EU region |
+| Logflare (Supabase, Inc.), US | Application logs (no content), deleted after 7 days |
+| Cloudflare, Inc., US | Older unencrypted media only (being phased out) |
+
+Payments are handled by **Vipps MobilePay AS** (Norway), which is an independent data controller for payment data under its own terms.
+
+## Cookies and tracking
+
+The App does not use cookies or any other tracking mechanisms.
+
+## Your rights
+
+Under the GDPR you have the right to access, rectify, and delete your personal data, to data portability, and to object to processing. Deletion is carried out by crypto-shredding, as described above.
+
+Your use of Oase can span both worlds at once: some of your oases may belong to an organization's plenum, while others sit outside any plenum. For your oases under a plenum, the organization that owns it is the data controller, and requests about your data in those oases should as a starting point go to that organization — we help them fulfil your rights. For your oases outside a plenum, contact us directly at dpa@oase.app.
+
+You can complain to the Danish Data Protection Agency (Datatilsynet, [datatilsynet.dk](https://www.datatilsynet.dk)).
+
+## Data retention
+
+Content is stored for as long as the oase it belongs to exists, or until it is deleted. There is no separate retention period beyond that: deletion is effected by destroying the encryption keys.
+
+## Policy updates
+
+We may update this Privacy Policy from time to time. If a change meaningfully affects how your data is handled, we will let you know.
+
+Questions? Write to dpa@oase.app.
