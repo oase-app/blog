@@ -79,6 +79,8 @@ The one exception is the older unencrypted media at Cloudflare (US) described ab
 
 **Our website and blog:** this policy and our blog at blog.oase.app are hosted by Vercel, Inc. (US). Like Netlify, Vercel sees the IP address and browser type of each visit in its request logs, which it keeps for at most a day; we run no analytics or tracking on the site. Vercel never handles any data from the App.
 
+**Our landing page** at hi.oase.app is served by GitHub Pages (GitHub, Inc., US) through its content delivery network; GitHub logs visitor IP addresses for security purposes under its own privacy statement. On that page we use Plausible Analytics (Plausible Insights OÜ, Estonia), a cookieless analytics service hosted in the EU that never stores IP addresses and cannot identify individual visitors.
+
 Some data **transits** non-EU services: push notifications are delivered via Apple, Google, and Expo (US), but their content is encrypted and only decrypted on your device. Technical error reports go to Sentry (US) with personal identifiers scrubbed before sending.
 
 Some of our providers are established outside the EU (Gigalixir in the US; Supabase in Singapore) even though the data itself is stored in EU regions. Those transfers rest on the EU Standard Contractual Clauses, supplemented by the on-device encryption described above (in line with the EDPB's recommendations 01/2020) — and the keys never leave the EU. Netlify (US), which only handles the web version's files and request metadata, is certified under the EU-U.S. Data Privacy Framework, with the Standard Contractual Clauses as fallback.
@@ -101,6 +103,8 @@ We use a small set of service providers to run Oase, each bound by a data proces
 | Functional Software, Inc. (Sentry), US | Error reporting (identifiers scrubbed) |
 | Netlify, Inc., US | Delivery of the web version at oase.app (app files and join-link previews); standard access logs with IP address, deleted after 30 days |
 | Vercel, Inc., US | Hosting of our website and blog at blog.oase.app, including this policy; request logs with IP address, kept at most a day |
+| GitHub, Inc., US | Hosting of the landing page at hi.oase.app (GitHub Pages); visitor IP addresses logged for security under GitHub's privacy statement |
+| Plausible Insights OÜ, Estonia | Cookieless, aggregate analytics on the landing page; EU-hosted, no IP addresses stored |
 | Google Cloud EMEA Ltd, Ireland | Internal analytics, EU region |
 | Cloudflare, Inc., US | Older unencrypted media only (being phased out) |
 
@@ -108,7 +112,7 @@ Payments are handled by **Vipps MobilePay AS** (Norway), which is an independent
 
 ## Cookies and tracking
 
-Neither the App nor our website uses cookies or any other tracking mechanisms.
+Neither the App nor our websites use cookies or any other tracking mechanisms. The only analytics on our landing page is Plausible, which is cookieless and does not identify individual visitors.
 
 ## Your rights
 
