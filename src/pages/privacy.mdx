@@ -40,7 +40,7 @@ Organizations can enter into our data processing agreement whether or not they o
 
 - Phone numbers
 - Your full birth date
-- Persistent logs of IP addresses
+- Persistent logs of IP addresses — our own systems keep none; the only exception is the web host's standard access logs, deleted after 30 days (see "Using Oase in the browser" below)
 - Location data
 - No third-party analytics, advertising, or tracking in the App — we only run our own internal analytics and technical error reporting
 
@@ -75,9 +75,11 @@ Your personal data is **stored in EU regions**:
 
 The one exception is the older unencrypted media at Cloudflare (US) described above, which is being phased out.
 
+**Using Oase in the browser:** if you open Oase at oase.app instead of the native app, the web version is delivered by Netlify, Inc. (US) through its global content delivery network. Netlify serves the app's files and renders the preview of shared join links. Like any web host, it sees the IP address, browser type, and requested URL of each request and keeps standard access logs for 30 days, after which they are deleted. Your content never passes through Netlify: the web app talks directly to our EU servers, and everything is encrypted on your device before it is sent. The native iOS and Android apps do not use Netlify.
+
 Some data **transits** non-EU services: push notifications are delivered via Apple, Google, and Expo (US), but their content is encrypted and only decrypted on your device. Technical error reports go to Sentry (US) with personal identifiers scrubbed before sending.
 
-Some of our providers are established outside the EU (Gigalixir in the US; Supabase in Singapore) even though the data itself is stored in EU regions. Those transfers rest on the EU Standard Contractual Clauses, supplemented by the on-device encryption described above (in line with the EDPB's recommendations 01/2020) — and the keys never leave the EU.
+Some of our providers are established outside the EU (Gigalixir in the US; Supabase in Singapore) even though the data itself is stored in EU regions. Those transfers rest on the EU Standard Contractual Clauses, supplemented by the on-device encryption described above (in line with the EDPB's recommendations 01/2020) — and the keys never leave the EU. Netlify (US), which only handles the web version's files and request metadata, is certified under the EU-U.S. Data Privacy Framework, with the Standard Contractual Clauses as fallback.
 
 ## Our service providers
 
@@ -95,6 +97,7 @@ We use a small set of service providers to run Oase, each bound by a data proces
 | Apple Inc. (APNs), US | Push notifications, iOS (encrypted payload) |
 | 650 Industries, Inc. (Expo), US | Push token registration (being phased out) |
 | Functional Software, Inc. (Sentry), US | Error reporting (identifiers scrubbed) |
+| Netlify, Inc., US | Delivery of the web version at oase.app (app files and join-link previews); standard access logs with IP address, deleted after 30 days |
 | Google Cloud EMEA Ltd, Ireland | Internal analytics, EU region |
 | Cloudflare, Inc., US | Older unencrypted media only (being phased out) |
 
