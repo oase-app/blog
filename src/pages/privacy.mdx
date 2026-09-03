@@ -2,7 +2,7 @@ import { DocumentLayout } from '@/components/DocumentLayout'
 
 export const meta = {
   author: 'Anders Lemke-Holstein',
-  date: '2026-08-26',
+  date: '2026-09-03',
   title: 'Privacy policy',
   description:
     'How Oase collects, protects, and stores personal information — and how encryption keeps your communities private.',
@@ -71,10 +71,11 @@ Your personal data is **stored in EU regions**:
 - Files and media: Scaleway, Paris
 - Application hosting: Gigalixir, in Google Cloud's Belgium region
 - Encryption keys: Scalingo, Strasbourg
+- Application logs (never your content, since it is encrypted before it reaches our servers): self-hosted with Hetzner, Germany, deleted automatically after 31 days
 
 The one exception is the older unencrypted media at Cloudflare (US) described above, which is being phased out.
 
-Some data **transits** non-EU services: push notifications are delivered via Apple, Google, and Expo (US), but their content is encrypted and only decrypted on your device. Technical error reports go to Sentry (US) with personal identifiers scrubbed before sending. Application logs — which never contain your content, since it is encrypted before it reaches our servers — are streamed to Logflare (US) and deleted automatically after 7 days.
+Some data **transits** non-EU services: push notifications are delivered via Apple, Google, and Expo (US), but their content is encrypted and only decrypted on your device. Technical error reports go to Sentry (US) with personal identifiers scrubbed before sending.
 
 Some of our providers are established outside the EU (Gigalixir in the US; Supabase in Singapore) even though the data itself is stored in EU regions. Those transfers rest on the EU Standard Contractual Clauses, supplemented by the on-device encryption described above (in line with the EDPB's recommendations 01/2020) — and the keys never leave the EU.
 
@@ -88,14 +89,13 @@ We use a small set of service providers to run Oase, each bound by a data proces
 | Supabase Pte. Ltd., Singapore | Database (encrypted content, push tokens, calendar feed data), EU regions |
 | Scaleway SAS, France | File and media storage (encrypted) |
 | Transloadit-II GmbH, Germany | Upload processing (encrypted files, anonymized names), EU region |
-| Hetzner Online GmbH, Germany | Call infrastructure (end-to-end encrypted calls) |
+| Hetzner Online GmbH, Germany | Call infrastructure (end-to-end encrypted calls) and self-hosted application logs (no content), deleted after 31 days |
 | Scalingo SAS, France | Encryption key storage |
 | Google LLC (FCM), US | Push notifications, Android (encrypted payload) |
 | Apple Inc. (APNs), US | Push notifications, iOS (encrypted payload) |
 | 650 Industries, Inc. (Expo), US | Push token registration (being phased out) |
 | Functional Software, Inc. (Sentry), US | Error reporting (identifiers scrubbed) |
 | Google Cloud EMEA Ltd, Ireland | Internal analytics, EU region |
-| Logflare (Supabase Pte. Ltd.), Singapore | Application logs (no content), stored in the US, deleted after 7 days |
 | Cloudflare, Inc., US | Older unencrypted media only (being phased out) |
 
 Payments are handled by **Vipps MobilePay AS** (Norway), which is an independent data controller for payment data under its own terms.
