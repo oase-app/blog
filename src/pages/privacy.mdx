@@ -83,6 +83,8 @@ The one exception is the older unencrypted media at Cloudflare (US) described ab
 
 Some data **transits** non-EU services: push notifications are delivered via Apple, Google, and Expo (US), but their content is encrypted and only decrypted on your device. Technical error reports go to Sentry (US) with personal identifiers scrubbed before sending.
 
+**GIFs:** in oases where GIFs are enabled, the GIF picker is powered by Giphy, Inc. (part of Shutterstock, Inc., US). It works directly from your device: when you search, your search terms go from your device to Giphy, and when a GIF is shown in a conversation, your device loads it from Giphy's servers, so Giphy sees your device's IP address. Oase itself sends nothing to Giphy and receives nothing back but the GIF you picked, which is then stored encrypted like any other content. Giphy processes this data under its own terms and privacy policy. An oase's admin can turn GIFs off for that oase in its settings, and organizations can ask their admins to do so.
+
 Some of our providers are established outside the EU (Gigalixir in the US; Supabase in Singapore) even though the data itself is stored in EU regions. Those transfers rest on the EU Standard Contractual Clauses, supplemented by the on-device encryption described above (in line with the EDPB's recommendations 01/2020) — and the keys never leave the EU. Netlify (US), which only handles the web version's files and request metadata, is certified under the EU-U.S. Data Privacy Framework, with the Standard Contractual Clauses as fallback.
 
 ## Our service providers
@@ -100,6 +102,7 @@ We use a small set of service providers to run Oase, each bound by a data proces
 | Google LLC (FCM), US | Push notifications, Android (encrypted payload) |
 | Apple Inc. (APNs), US | Push notifications, iOS (encrypted payload) |
 | 650 Industries, Inc. (Expo), US | Push token registration (being phased out) |
+| Giphy, Inc. (Shutterstock), US | GIF search and delivery in chat, only in oases where the admin has GIFs enabled; receives search terms and your device's IP address directly from your device, never from Oase |
 | Functional Software, Inc. (Sentry), US | Error reporting (identifiers scrubbed) |
 | Netlify, Inc., US | Delivery of the web version at oase.app (app files and join-link previews); standard access logs with IP address, deleted after 30 days |
 | Vercel, Inc., US | Hosting of blog.oase.app (including this policy) and changelog.oase.app; request logs with IP address, kept at most a day |
